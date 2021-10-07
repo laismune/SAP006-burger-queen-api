@@ -5,11 +5,11 @@ const {
 
 const router = Router();
 
-router.get('/users', getAllUsers);
-router.post('/users', postUser);
+router.get('/', getAllUsers);
+router.post('/', postUser);
 
-router.get('/users/:userid', getUser);
-router.put('/users/:userid', putUser);
-router.delete('/users/:userid', deleteUser);
+router.get('/:userid', getUser);
+router.put('/:userid', putUser);
+router.delete('/:userid', deleteUser);
 
 module.exports = router;
