@@ -2,27 +2,27 @@
 
 const getAllOrders = (req, res) => {
   console.log('função getAllOrders');
-  res.send('Request getExample feita');
+  res.send('função getAllOrders');
 };
 
 const getOrder = (req, res) => {
   console.log('função getOrder');
-  res.send('Request getOtherExample feita');
+  res.send('função getOrder');
 };
 
 const postOrder = (req, res) => {
   console.log('função postAllOrders');
-  res.send('Request getOtherExample feita');
+  res.send('função postAllOrders');
 };
 
 const putOrder = (req, res) => {
   console.log('função putOrder');
-  res.send('Request getOtherExample feita');
+  res.send('função putOrder');
 };
 
 const deleteOrder = (req, res) => {
   console.log('função deleteOrder');
-  res.send('Request getOtherExample feita');
+  res.send('função deleteOrder');
 };
 
 module.exports = {

@@ -2,27 +2,27 @@
 
 const getAllProducts = (req, res) => {
   console.log('função getAllProducts');
-  res.send('Request getExample feita');
+  res.send('função getAllProducts');
 };
 
 const getProduct = (req, res) => {
   console.log('função getProduct');
-  res.send('Request getOtherExample feita');
+  res.send('função getProducts');
 };
 
 const postAllProducts = (req, res) => {
   console.log('função postAllProducts');
-  res.send('Request getOtherExample feita');
+  res.send('função postAllProducts');
 };
 
 const putProduct = (req, res) => {
   console.log('função putProduct');
-  res.send('Request getOtherExample feita');
+  res.send('função putProduct');
 };
 
 const deleteProduct = (req, res) => {
   console.log('função deleteProduct');
-  res.send('Request getOtherExample feita');
+  res.send('função deleteProduct');
 };
 
 module.exports = {
