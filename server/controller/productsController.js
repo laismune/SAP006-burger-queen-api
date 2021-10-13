@@ -10,7 +10,7 @@ const getProduct = (req, res) => {
   res.send('função getProducts');
 };
 
-const postAllProducts = (req, res) => {
+const postProduct = (req, res) => {
   console.log('função postAllProducts');
   res.send('função postAllProducts');
 };
@@ -26,5 +26,5 @@ const deleteProduct = (req, res) => {
 };
 
 module.exports = {
-  getAllProducts, getProduct, postAllProducts, putProduct, deleteProduct,
+  getAllProducts, getProduct, postProduct, putProduct, deleteProduct,
 };
