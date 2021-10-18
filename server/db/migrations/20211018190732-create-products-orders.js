@@ -1,34 +1,29 @@
 'use strict';
-
-const { ForeignKeyConstraintError } = require("sequelize/types");
-
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('Orders', {
+    await queryInterface.createTable('ProductsOrders', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      user_id: {
+      order_id: {
         allowNull: false,
-        references: { model: 'User', key: 'id' },
+        references: { model: 'Orders', key: 'id' },
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE',
         type: Sequelize.INTEGER
       },
-      client_name: {
-        type: Sequelize.STRING
-      },
-      table: {
+      product_id: {
+        allowNull: false,
+        references: { model: 'Products', key: 'id' },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE',
         type: Sequelize.INTEGER
       },
-      status: {
-        type: Sequelize.STRING
-      },
-      processedAt: {
-        type: Sequelize.DATE
+      qtd: {
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,
@@ -41,9 +36,6 @@ module.exports = {
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('Orders');
+    await queryInterface.dropTable('ProductsOrders');
   }
 };
-
-/*
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1bGxpQGtydXN0eWtyYWIuY29tIiwiaWQiOjE5NDksImlhdCI6MTYzMTI0NDM0MSwiZXhwIjoxNjYyODAxOTQxfQ.ey2HG1ugfXWZpqufoUUNfQOrML7FHBRaBTTvdLOQnns */
